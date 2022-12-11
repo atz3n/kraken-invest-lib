@@ -1,4 +1,4 @@
-name: Publish lib
+name: Publish common lib
 
 on:
   workflow_dispatch:
@@ -13,17 +13,17 @@ on:
         default: "patch"
 
 jobs:
-  test-lib:
+  test-common:
     uses: ./.github/workflows/test-project.yml
     secrets: inherit
     with:
-      project_dir: packages/lib
+      project_dir: packages/common
 
-  publish-lib:
-    needs: test-lib
+  publish-common:
+    needs: test-common
     uses: ./.github/workflows/publish-node-package.yml
     secrets: inherit
     with:
-      name: lib
-      project_dir: packages/lib
+      name: common
+      project_dir: packages/common
       version: ${{ inputs.version }}
