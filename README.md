@@ -1,2 +1,4 @@
 # kraken-invest-lib
-Library used by kraken investment bots
+
+
+Libraries used by kraken investing bots.

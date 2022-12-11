@@ -1,0 +1,11 @@
+{
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "*.env": "env"
+      }
+}
