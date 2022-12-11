@@ -1,6 +1,6 @@
 {
     "name": "@atz3n/kraken-invest-common",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "A common utilities library for kraken investing bots",
     "author": "atz3n",
     "license": "MIT",
@@ -8,7 +8,9 @@
         "type": "git",
         "url": "https://github.com/atz3n/kraken-invest-lib"
     },
-    "files": [ "dist/src/**/*" ],
+    "files": [
+        "dist/src/**/*"
+    ],
     "main": "dist/src/index.js",
     "types": "dist/src/index.d.ts",
     "scripts": {
