@@ -1,6 +1,6 @@
 {
     "name": "@atz3n/kraken-invest-common",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A common utilities library for kraken investing bots",
     "author": "atz3n",
     "license": "MIT",
