@@ -27,3 +27,4 @@ jobs:
       name: common
       project_dir: packages/common
       version: ${{ inputs.version }}
+      public: true

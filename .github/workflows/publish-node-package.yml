@@ -13,6 +13,9 @@ on:
       name:
         required: true
         type: string
+      public:
+        required: false
+        type: boolean
 
 jobs:
   publish-lib:
@@ -41,7 +44,11 @@ jobs:
 
       - name: Create and publish package
         run: |
-          yarn publish --non-interactive --access restricted --${{ inputs.version }} --no-git-tag-version
+          ACCESS="restricted"
+          if [ "${{ inputs.public }}" = "true" ]; then
+            ACCESS="public"
+          fi
+          yarn publish --non-interactive --access ${ACCESS} --${{ inputs.version }} --no-git-tag-version
           echo PACKAGE_VERSION=$(grep version package.json | awk -F \" '{print $4}') >> $GITHUB_ENV
           
       - name: Update package version
